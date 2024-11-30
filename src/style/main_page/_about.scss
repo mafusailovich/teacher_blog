@@ -1,0 +1,39 @@
+.about {
+    background: radial-gradient(50.00% 50.00% at 50% 50%,rgb(221, 251, 231),rgb(255, 255, 255) 100%);
+    padding-top: 50px;
+    padding-bottom: 30px;
+    &__title {
+        text-align: center;
+        margin-bottom: 45px;
+    }
+    &__short-info {
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 1.2;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    &__qualifications {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 100px;
+    }
+
+}
+
+.qualification {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &__img {
+        width: 65px;
+        height: 65px;
+    }
+    &__text {
+        font-weight: 400;
+        font-size: 28px;
+        line-height: 1.2;
+        text-align: center;
+    }
+}

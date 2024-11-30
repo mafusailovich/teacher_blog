@@ -1,0 +1,13 @@
+.footer {
+    background: linear-gradient(180deg, rgba(206, 220, 229, 0), rgb(206, 220, 229) 100%);
+    padding-top: 50px;
+    padding-bottom: 30px;
+    &__text {
+        color: rgb(0, 0, 0);
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 21px;
+        text-align: right;
+    }
+}

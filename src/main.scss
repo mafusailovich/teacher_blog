@@ -1,7 +1,22 @@
 @use 'style/nullst';
+@use 'style/reuse_styles';
 @use 'style/header';
+@use 'style/main_page/about';
+@use 'style/main_page/qual_courses';
+@use 'style/main_page/achievements';
+@use 'style/main_page/teachers';
+@use 'style/main_page/parents';
+@use 'style/main_page/events';
+@use 'style/main_page/feedback';
+@use 'style/footer';
 
 
 body {
     font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: white;
+}
+
+.title {
+    font-weight: 700;
+    font-size: 36px;
 }

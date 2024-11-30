@@ -1,0 +1,40 @@
+@use "../variables" as var;
+
+.teachers {
+    background: radial-gradient(48% 48% at 50% 41%, rgba(214, 220, 224, 0.44), rgba(154, 224, 251, 0) 100%);
+    padding-top: 50px;
+    padding-bottom: 30px;
+    &__title {
+        text-align: center;
+        margin-bottom: 60px;
+    }
+    &__cards {
+        display: grid;
+        grid-template-columns: repeat(3, 500px);
+        justify-content: space-around;
+        margin-bottom: 35px;
+    }
+    &__card-btn,
+    &__card,
+    &__showall-btn {
+        border: 1px solid rgb(127, 206, 255);
+        border-radius: 10px;
+    }
+    &__showall-btn {
+        width: 280px;
+        height: 70px;
+        color: var.$button-text;
+        background-color: transparent;
+        font-size: 20px;
+        font-weight: 700;
+        display: block;
+        margin: 0 auto;
+    }
+    &__card {
+        display: grid;
+        grid-template-rows: subgrid;
+        grid-row: 1 / 3;
+        justify-items: center;
+        padding: 10px 15px 20px;
+    }
+}
