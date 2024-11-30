@@ -1,4 +1,7 @@
-@import '~normalize.css';
-@import 'style/fonts';
-@import 'style/var';
-@import 'style/style';
+@use 'style/nullst';
+@use 'style/header';
+
+
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
