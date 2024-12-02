@@ -27,7 +27,20 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
+      filename: 'index.html',
       template: path.resolve(__dirname, 'src', 'index.html'),
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'teachers.html',
+      template: path.resolve(__dirname, 'src', 'teachers.html'),
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'parents.html',
+      template: path.resolve(__dirname, 'src', 'parents.html'),
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'events.html',
+      template: path.resolve(__dirname, 'src', 'events.html'),
     }),
     new MiniCssExtractPlugin({
       filename: '[name].[contenthash].css',

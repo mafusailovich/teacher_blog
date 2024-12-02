@@ -1,13 +1,13 @@
 import './index.html';
+import './teachers.html';
 import './main.scss';
 
 // core version + navigation, pagination modules:
 import Swiper from 'swiper';
-import { Navigation } from 'swiper/modules';
+import { Navigation} from 'swiper/modules';
 // import Swiper and modules styles
 import 'swiper/css';
 import 'swiper/css/navigation';
-import 'swiper/css/pagination';
 
 // init Swiper:
 const swiper = new Swiper('.achievements-slider', {
@@ -26,3 +26,13 @@ const swiper = new Swiper('.achievements-slider', {
     prevEl: '.swiper-button-prev',
   },
 });
+
+;(function (){
+  const links = document.querySelectorAll('.achievements-slider__link')
+  for (const link of links) {
+    link.addEventListener('click', event => {
+      event.preventDefault();
+    })
+  }
+})()
+

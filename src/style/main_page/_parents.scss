@@ -21,13 +21,15 @@
         border-radius: 10px;
     }
     &__showall-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         width: 280px;
         height: 70px;
         color: var.$button-text;
         background-color: transparent;
         font-size: 20px;
         font-weight: 700;
-        display: block;
         margin: 0 auto;
     }
     &__card {
