@@ -28,6 +28,8 @@ const swiper = new Swiper('.achievements-slider', {
 });
 
 ;(function (){
+  //
+
   const links = document.querySelectorAll('.achievements-slider__link')
   for (const link of links) {
     link.addEventListener('click', event => {

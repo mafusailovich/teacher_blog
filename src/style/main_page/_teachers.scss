@@ -1,7 +1,7 @@
 @use "../variables" as var;
 
 .teachers {
-    background: radial-gradient(48% 48% at 50% 41%, rgba(214, 220, 224, 0.44), rgba(154, 224, 251, 0) 100%);
+    background: radial-gradient(48.00% 48.00% at 50% 41%,rgba(173, 207, 231, 0.44),rgba(154, 224, 251, 0) 100%);
     padding-top: 50px;
     padding-bottom: 30px;
     &__title {
@@ -10,8 +10,9 @@
     }
     &__cards {
         display: grid;
-        grid-template-columns: repeat(3, 500px);
-        justify-content: space-around;
+        grid-template-columns: repeat(auto-fit, minmax(300px,500px));
+        gap: 30px;
+        justify-content: center;
         margin-bottom: 35px;
     }
     &__card-btn,
@@ -30,14 +31,13 @@
         background-color: transparent;
         font-size: 20px;
         font-weight: 700;
-        
         margin: 0 auto;
     }
     &__card {
-        display: grid;
-        grid-template-rows: subgrid;
-        // grid-row: 1 / 7;
-        justify-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
         padding: 10px 15px 20px;
     }
 }
