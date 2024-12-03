@@ -9,8 +9,8 @@ import { Navigation} from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 
-// init Swiper:
-const swiper = new Swiper('.achievements-slider', {
+// Слайдер для достижений на главной
+const achievements_slider = new Swiper('.achievements-slider', {
   // configure Swiper to use modules
   modules: [Navigation],
 
@@ -27,9 +27,25 @@ const swiper = new Swiper('.achievements-slider', {
   },
 });
 
-;(function (){
-  //
+// // Слайдер для галереи событий на странице события
+const event_slider = new Swiper('.event-slider', {
+  // configure Swiper to use modules
+  modules: [Navigation],
 
+  // Optional parameters
+  direction: 'horizontal',
+  loop: true,
+  slidesPerView: 3,
+  spaceBetween: 30,
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+});
+
+;(function (){
   const links = document.querySelectorAll('.achievements-slider__link')
   for (const link of links) {
     link.addEventListener('click', event => {

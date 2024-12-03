@@ -1,5 +1,11 @@
+@use "../variables" as var;
+
 .achievements {
-    background: radial-gradient(50% 50% at 50% 50%, rgb(221, 251, 231), rgba(255, 255, 255, 0) 100%);
+    background: radial-gradient(
+        50% 50% at 50% 50%,
+        rgb(221, 251, 231),
+        rgba(255, 255, 255, 0) 100%
+    );
     padding-top: 50px;
     padding-bottom: 30px;
     &__title {
@@ -29,16 +35,16 @@
     }
 }
 
-.swiper {
-    display: flex;
-    justify-content: center;
-}
-
 .achievements-slider {
     &__image {
         text-align: center;
         & img {
             max-width: 100%;
+            border: 2px solid rgba(127, 206, 255, 0.5);
+            border-radius: 20px;
         }
+    }
+    &__link {
+        cursor: zoom-in;
     }
 }

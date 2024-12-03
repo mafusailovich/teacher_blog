@@ -1,22 +1,54 @@
-@use 'style/nullst';
-@use 'style/reuse_styles';
-@use 'style/header';
-@use 'style/main_page/about';
-@use 'style/main_page/qual_courses';
-@use 'style/main_page/achievements';
-@use 'style/main_page/teachers';
-@use 'style/main_page/parents';
-@use 'style/main_page/events';
-@use 'style/main_page/feedback';
-@use 'style/footer';
-
+@use "style/nullst";
+@use "style/header";
+@use "style/main_page/about";
+@use "style/main_page/qual_courses";
+@use "style/main_page/achievements";
+@use "style/main_page/teachers";
+@use "style/main_page/parents";
+@use "style/main_page/events";
+@use "style/main_page/feedback";
+@use "style/event";
+@use "style/footer";
+@use "style/variables" as var;
 
 body {
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: Georgia, "Times New Roman", Times, serif;
     background-color: white;
 }
 
 .title {
     font-weight: 700;
     font-size: 36px;
+}
+
+.document-card {
+    &__img {
+        width: 60px;
+        height: 60px;
+    }
+    &__text {
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 1.5;
+        text-align: center;
+        margin-bottom: 25px;
+    }
+    &__btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: 700;
+        font-size: 20px;
+        width: 170px;
+        height: 70px;
+        background-color: transparent;
+        border: 2px solid black;
+        border-radius: 10px;
+        color: var.$button-text;
+    }
+    &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }
