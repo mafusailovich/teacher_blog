@@ -32,6 +32,9 @@
         &:last-of-type{
             margin-bottom: 40px;
         }
+        &--message {
+            height: 100px;
+        }
     }
     &__submit {
         width: 280px;

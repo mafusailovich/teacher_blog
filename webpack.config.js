@@ -46,6 +46,10 @@ module.exports = {
       filename: 'event.html',
       template: path.resolve(__dirname, 'src', 'event.html'),
     }),
+    new HtmlWebpackPlugin({
+      filename: 'add_material.html',
+      template: path.resolve(__dirname, 'src', 'add_material.html'),
+    }),
     new MiniCssExtractPlugin({
       filename: '[name].[contenthash].css',
     }),

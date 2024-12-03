@@ -1,6 +1,9 @@
 import './index.html';
 import './teachers.html';
 import './main.scss';
+import './basePath.js';
+import 'ckeditor4';
+
 
 // core version + navigation, pagination modules:
 import Swiper from 'swiper';
@@ -37,6 +40,7 @@ const event_slider = new Swiper('.event-slider', {
   loop: true,
   slidesPerView: 3,
   spaceBetween: 30,
+  centeredSlides: true,
 
   // Navigation arrows
   navigation: {
@@ -54,3 +58,7 @@ const event_slider = new Swiper('.event-slider', {
   }
 })()
 
+// The code below is an example of using CKEditor 4.
+CKEDITOR.replace( 'app', {
+  extraPlugins: 'iframe'
+} );
