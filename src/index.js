@@ -3,14 +3,16 @@
 import './index.html';
 import './teachers.html';
 import './main.scss';
+import './js_modules/menu_btn.js';
 
 
 // core version + navigation, pagination modules:
 import Swiper from 'swiper';
-import { Navigation} from 'swiper/modules';
+import { Navigation } from 'swiper/modules';
 // import Swiper and modules styles
 import 'swiper/css';
 import 'swiper/css/navigation';
+import openMenu from './js_modules/menu_btn.js';
 
 // Слайдер для достижений на главной
 const achievements_slider = new Swiper('.achievements-slider', {
@@ -22,6 +24,25 @@ const achievements_slider = new Swiper('.achievements-slider', {
   loop: true,
   slidesPerView: 4,
   spaceBetween: 30,
+
+  breakpoints: {
+    360: {
+      slidesPerView: 1,
+      spaceBetween: 20,
+    },
+    576: {
+      slidesPerView: 2,
+      spaceBetween: 20,
+    },
+    820: {
+      slidesPerView: 3,
+      spaceBetween: 30,
+    },
+    1440: {
+      slidesPerView: 4,
+      spaceBetween: 30,
+    }
+  },
 
   // Navigation arrows
   navigation: {
@@ -49,7 +70,7 @@ const event_slider = new Swiper('.event-slider', {
   },
 });
 
-;(function (){
+; (function () {
   const links = document.querySelectorAll('.achievements-slider__link')
   for (const link of links) {
     link.addEventListener('click', event => {
@@ -58,5 +79,4 @@ const event_slider = new Swiper('.event-slider', {
   }
 })()
 
-
-
+openMenu();

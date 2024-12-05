@@ -3,6 +3,7 @@
 .container {
     max-width: 1700px;
     margin: 0 auto;
+    padding: 0 10px;
 }
 
 .header {
@@ -14,7 +15,7 @@
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
-        background-color: rgba(255, 255, 255, 0.7);
+        background-color: rgba(255, 255, 255, 0.8);
         background-blend-mode: color;
     }
     &__content {
@@ -25,11 +26,15 @@
 
 .main-menu {
     &__btn {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        z-index: 2;
         width: 50px;
         height: 50px;
         background-color: rgba(0, 0, 0, 0.5);
         border-radius: 100%;
-        display: flex;
+        display: none;
         flex-direction: column;
         align-items: center;
         justify-content: center;
@@ -44,8 +49,8 @@
         }
     }
     &__btn-close {
-        visibility: hidden;
         cursor: pointer;
+        pointer-events: none;
         width: 30px;
         height: 30px;
         display: flex;
@@ -56,7 +61,8 @@
         top: 10px;
         right: 20px;
         z-index: 11;
-        opacity: 0.5;
+        opacity: 0;
+        transition: opacity 0.2s linear;
         &-line {
             background-color: var.$header-text;
             width: 25px;
@@ -72,6 +78,10 @@
         }
         &:hover {
             opacity: 1;
+        }
+        &--visible {
+            opacity: 0.5;
+            pointer-events: all;
         }
     }
     &__menu {
@@ -107,9 +117,7 @@
     right: 5px;
     z-index: 1;
     &__bg {
-        max-width: clamp(20rem, 50vw + 1rem, 90rem);
-        background-color: rgba(221, 251, 231, 0.3);
-        border-radius: 10px;
+        max-width: clamp(25rem, 50vw + 1rem, 90rem);
     }
     &__text {
         font-size: clamp(1.8rem, 1vw + 1rem, 2.4rem);
@@ -174,22 +182,31 @@
 @media (max-width: 920px) {
     .main-menu {
         &__menu {
-            top: -180px;
+            opacity: 0;
+            pointer-events: none;
+            top: 0;
             left: 0;
             border-radius: 0;
             max-width: 100%;
             width: 100%;
             height: 180px;
-            pointer-events: none;
             flex-direction: column;
             background-color: whitesmoke;
             padding: 5px;
-            transform: top 1s linear;
+            transition: opacity 0.3s linear;
+            &--visible {
+                opacity: 1;
+                pointer-events: all;
+            }
+        }
+
+        &__btn {
+            display: flex;
         }
     }
 
     .slogan {
-        top: 80px;
+        top: 40px;
     }
 
     .short-info {
@@ -200,9 +217,26 @@
     }
 }
 
-@media (max-width: 830px){
+@media (max-width: 830px) {
     .short-info {
         top: 200px;
     }
 }
 
+@media (max-width: 576px){
+    .header {
+        &__bg {
+            max-height: 540px;
+        }
+    }
+    .short-info {
+        &__photo-img {
+            width: 120px;
+        }
+    }
+    .slogan {
+        &__text {
+
+        }
+    }
+}

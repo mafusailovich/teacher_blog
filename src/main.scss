@@ -18,7 +18,7 @@ body {
 
 .title {
     font-weight: 700;
-    font-size: 36px;
+    font-size: clamp(2.4rem, 2vw + 1rem, 3.6rem);
 }
 
 .document-card {
