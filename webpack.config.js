@@ -1,3 +1,5 @@
+'use strict'
+
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
@@ -22,8 +24,9 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     clean: true,
-    filename: '[name].[contenthash].js',
-    assetModuleFilename: 'assets/[name][ext]',
+    // filename: '[name].[contenthash].js',
+    // assetModuleFilename: 'assets/[name][ext]',
+    filename: 'app.js',
   },
   plugins: [
     new HtmlWebpackPlugin({

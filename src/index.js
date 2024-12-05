@@ -1,8 +1,8 @@
+'use strict'
+
 import './index.html';
 import './teachers.html';
 import './main.scss';
-import './basePath.js';
-import 'ckeditor4';
 
 
 // core version + navigation, pagination modules:
@@ -58,7 +58,5 @@ const event_slider = new Swiper('.event-slider', {
   }
 })()
 
-// The code below is an example of using CKEditor 4.
-CKEDITOR.replace( 'app', {
-  extraPlugins: 'iframe'
-} );
+
+

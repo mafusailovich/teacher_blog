@@ -22,7 +22,6 @@
     "@babel/preset-env": "^7.21.4",
     "@joyzl/html-include-loader": "^1.0.1",
     "babel-loader": "^9.1.2",
-    "ckeditor4": "^4.25.0",
     "copy-webpack-plugin": "^11.0.0",
     "css-loader": "^6.7.3",
     "filemanager-webpack-plugin": "^8.0.0",
