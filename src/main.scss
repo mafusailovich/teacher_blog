@@ -23,12 +23,12 @@ body {
 
 .document-card {
     &__img {
-        width: 60px;
-        height: 60px;
+        width: clamp(4rem, 5vw + 1rem, 6rem);
+        height: clamp(4rem, 5vw + 1rem, 6rem);
     }
     &__text {
         font-weight: 700;
-        font-size: 24px;
+        font-size: clamp(1.8rem, 1vw + 1.25rem, 2.4rem);
         line-height: 1.5;
         text-align: center;
         margin-bottom: 25px;
@@ -38,9 +38,9 @@ body {
         justify-content: center;
         align-items: center;
         font-weight: 700;
-        font-size: 20px;
-        width: 170px;
-        height: 70px;
+        font-size: clamp(1.6rem, 1.1vw + 0.75rem, 2rem);
+        width: clamp(13rem, 15vw + 1.25rem, 17rem);
+        height: clamp(4rem, 5vw + 1rem, 7rem);
         background-color: transparent;
         border: 2px solid black;
         border-radius: 10px;
@@ -50,5 +50,88 @@ body {
         display: flex;
         flex-direction: column;
         align-items: center;
+    }
+}
+
+.events,
+.teachers,
+.parents {
+    &__showall {
+        display: flex;
+        justify-content: center;
+        width: clamp(23rem, 30vw + 0.25rem, 28rem);
+        height: clamp(4rem, 5vw + 1rem, 7rem);
+        color: var.$button-text;
+        background-color: transparent;
+        font-size: clamp(1.6rem, 1.1vw + 0.75rem, 2rem);
+        line-height: clamp(4rem, 5vw + 1rem, 7rem);
+        font-weight: 700;
+        margin: 0 auto;
+        border-radius: 10px;
+    }
+}
+
+.modal-window {
+    &__wrapper {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 10;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.3);
+    }
+    &__body {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #fff;
+        border-radius: 5px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+    &__content {
+        position: relative;
+    }
+    &__image {
+        text-align: center;
+        & img {
+            max-width: 600px;
+            min-width: 500px;
+            width: 100%;
+        }
+    }
+    &__close {
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        top: -40px;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #fff;
+        cursor: pointer; 
+        opacity: 0.5;
+        &:hover {
+            opacity: 1;
+        }    
+    }
+    &__line {
+        width: 40px;
+        height: 4px;
+        background-color: black;
+        opacity: 0.5;
+        transform: rotate(-45deg);
+        &:first-of-type {
+            transform: rotate(45deg);
+            position: relative;
+            top: 2px;
+        }
+        &:last-of-type{
+            position: relative;
+            top: -2px;
+        }
     }
 }
