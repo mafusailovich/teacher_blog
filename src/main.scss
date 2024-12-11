@@ -9,11 +9,25 @@
 @use "style/main_page/feedback";
 @use "style/event";
 @use "style/footer";
+@use "style/material";
+@use "style/auth";
+@use "style/manage";
 @use "style/variables" as var;
 
 body {
     font-family: Georgia, "Times New Roman", Times, serif;
     background-color: white;
+}
+
+.wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+main {
+    flex-grow: 1;
 }
 
 .title {

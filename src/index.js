@@ -4,7 +4,6 @@ import './index.html';
 import './teachers.html';
 import './main.scss';
 
-
 // core version + navigation, pagination modules:
 import Swiper from 'swiper';
 import { Navigation, Zoom } from 'swiper/modules';
@@ -14,6 +13,25 @@ import 'swiper/css/navigation';
 import 'swiper/css/zoom';
 import openMenu from './js_modules/menu_btn.js';
 import openModalPhoto from './js_modules/modal_window.js';
+import dropdown from './js_modules/dropdown_menu.js';
+import { anyFilesUpload, oneFileUpload } from './js_modules/custom_file_upload.js';
+import { ClassicEditor, Essentials, Bold, Italic, Font, Paragraph, Image, FileUploader } from 'ckeditor5';
+
+import 'ckeditor5/ckeditor5.css';
+
+//ckeditor
+if (document.querySelector('.material__text-content')){
+  ClassicEditor
+    .create( document.querySelector( '.material__text' ), {
+        licenseKey: 'GPL', // Or 'GPL'.
+        plugins: [ Essentials, Bold, Italic, Font, Paragraph ],
+        toolbar: [
+            'undo', 'redo', '|', 'bold', 'italic', '|',
+            'fontSize', 'fontFamily', 'fontColor', 'fontBackgroundColor'
+        ],
+    } )
+    .catch (error => console.log(error));
+}
 
 // Слайдер для достижений на главной
 const achievements_slider = new Swiper('.achievements-slider', {
@@ -102,3 +120,9 @@ const event_slider = new Swiper('.event-slider', {
 openMenu();
 openModalPhoto();
 openModalPhoto('.event-slider', '.event__popup');
+dropdown();
+oneFileUpload();
+oneFileUpload('.material__document-pdf');
+oneFileUpload('.material__achievement');
+anyFilesUpload();
+

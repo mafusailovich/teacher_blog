@@ -25,7 +25,7 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     clean: true,
     filename: '[name].[contenthash].js',
-    //assetModuleFilename: 'assets/[name][ext]',
+    assetModuleFilename: 'assets/[name][ext]',
   },
   plugins: [
     new HtmlWebpackPlugin({
@@ -52,12 +52,17 @@ module.exports = {
       filename: 'add_material.html',
       template: path.resolve(__dirname, 'src', 'add_material.html'),
     }),
+    new HtmlWebpackPlugin({
+      filename: 'auth.html',
+      template: path.resolve(__dirname, 'src', 'auth.html'),
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'manage_materials.html',
+      template: path.resolve(__dirname, 'src', 'manage_materials.html'),
+    }),
     new MiniCssExtractPlugin({
       filename: '[name].[contenthash].css',
     }),
-    // new CopyPlugin({
-    //   patterns: [{ from: 'dist/img/*.avif', to: 'src/img' }],
-    // }),
   ],
 module: {
   rules: [

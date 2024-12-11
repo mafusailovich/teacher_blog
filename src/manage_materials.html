@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png" />
+    <link rel="manifest" href="img/favicon/site.webmanifest" />
+    <title>Блог воспитателя - авторизация</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            <include src="htmlparts/header_second.html" />
+        </header>
+        <main class="main">
+            <div class="manage">
+                <div class="container">
+                    <h2 class="manage__title title">Управление материалами</h2>
+                    <p class="manage__text">Выберите категорию материалов для показа</p>
+                    <div class="manage__dropdown dropdown">
+                        <button class="dropdown__btn" type="button">Выберите раздел</button>
+                        <ul class="dropdown__list">
+                            <li class="dropdown__list-item" data-value="events">События и мероприятия</li>
+                            <li class="dropdown__list-item" data-value="parents">Родителям</li>
+                            <li class="dropdown__list-item" data-value="teachers">Педагогам</li>
+                            <li class="dropdown__list-item" data-value="achievement">Достижения</li>
+                        </ul>
+                        <input class="material__select-input dropdown__hide-input" type="text" value="1234"
+                            name="select_material">
+                    </div>
+                    <ul class="manage__materials--events">
+                        <li class="manage__material">
+                            <p>Математические игры</p>
+                            <button type="button">Редактировать</button>
+                            <button type="button">Удалить</button>
+                        </li>
+                        <li class="manage__material">
+                            <p>Подвижные игры на площадке</p>
+                            <button type="button">Редактировать</button>
+                            <button type="button">Удалить</button>
+                        </li>
+                        <li class="manage__material">
+                            <p>Юные шахматисты</p>
+                            <button type="button">Редактировать</button>
+                            <button type="button">Удалить</button>
+                        </li>
+                    </ul>
+                    <ul class="manage__materials--parents">
+                        <li class="manage__material">
+                            <p>Как учить стихи с ребенком</p>
+                            <button type="button">Редактировать</button>
+                            <button type="button">Удалить</button>
+                        </li>
+                        <li class="manage__material">
+                            <p>Правила для родителей</p>
+                            <button type="button">Редактировать</button>
+                            <button type="button">Удалить</button>
+                        </li>
+                        <li class="manage__material">
+                            <p>Семейный кодекс здоровья</p>
+                            <button type="button">Редактировать</button>
+                            <button type="button">Удалить</button>
+                        </li>
+                    </ul>
+                    <ul class="manage__materials--teachers">
+                        <li class="manage__material">
+                            <p>Дополнительная общеобразовательная общеразвивающая
+                                программа "Математическая игротека"</p>
+                            <button type="button">Редактировать</button>
+                            <button type="button">Удалить</button>
+                        </li>
+                        <li class="manage__material">
+                            <p>Занятие по теме "Зимние чудеса"</p>
+                            <button type="button">Редактировать</button>
+                            <button type="button">Удалить</button>
+                        </li>
+                        <li class="manage__material">
+                            <p>Конспект занятия по рисованию в технике печати листьями
+                                «Осенний лес»</p>
+                            <button type="button">Редактировать</button>
+                            <button type="button">Удалить</button>
+                        </li>
+                    </ul>
+                    <ul class="manage__materials--achievement">
+                        <li class="manage__material">
+                            <p>Математические игры</p>
+                            <button type="button">Редактировать</button>
+                            <button type="button">Удалить</button>
+                        </li>
+                        <li class="manage__material">
+                            <p>Подвижные игры на площадке</p>
+                            <button type="button">Редактировать</button>
+                            <button type="button">Удалить</button>
+                        </li>
+                        <li class="manage__material">
+                            <p>Юные шахматисты</p>
+                            <button type="button">Редактировать</button>
+                            <button type="button">Удалить</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <include src="htmlparts/footer.html" />
+        </footer>
+    </div>
+</body>
+
+</html>

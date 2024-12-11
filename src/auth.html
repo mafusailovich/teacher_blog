@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png" />
+    <link rel="manifest" href="img/favicon/site.webmanifest" />
+    <title>Блог воспитателя - авторизация</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            <include src="htmlparts/header_second.html" />
+        </header>
+        <main class="main">
+            <div class="auth">
+                <div class="container">
+                    <h2 class="auth__title title">Авторизация</h2>
+                    <form class="auth__form" action="" method="POST">
+                        <label class="auth__label" for="auth-login">Логин</label>
+                        <input class="auth__input" type="text" name="auth-login" id="auth-login">
+                        <label class="auth__label" for="auth-password">Пароль</label>
+                        <input class="auth__input" type="password" name="auth-password" id="auth-password">
+                        <button class="auth__btn" type="submit">Вход</button>
+                    </form>
+                </div>
+            </div>                
+        </main>
+        <footer>
+            <include src="htmlparts/footer.html" />
+        </footer>
+    </div>
+</body>
+
+</html>
