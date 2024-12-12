@@ -53,9 +53,37 @@ function selectFormItems (param){
     }
 }
 
-function manageSelect(){
-    const manage = document.querySelector('.manage__materials')
+function manageSelect(param){
+    const manage = document.querySelector('.manage__materials');
+    const baseSelector = '.manage__material';
+    const items = manage.querySelectorAll('ul');
+    //делаем все невидимым, кроме выбора раздела
+    for (let item of items){
+        item.classList.add('invisible');
+    }
+    let selector = null;
+    //выбор разделов формы в зависимости от пунктов списка
+    switch (param){
+        case 'events':
+            selector = `${baseSelector}--events`;
+            break;
+        
+        case 'parents':
+            selector = `${baseSelector}--parents`;
+            break;
 
+        case 'teachers':
+            selector = `${baseSelector}--teachers`;
+            break;
+
+        case 'achievement':
+            selector = `${baseSelector}--achievements`;
+            break;
+    }
+
+    
+    //перебираем элементы формы и делаем видимыми все элементы и списка
+    manage.querySelector(selector).classList.remove('invisible');
 }
 
 export default function dropdown() {
@@ -76,7 +104,11 @@ export default function dropdown() {
                     dropdownInput.value = event.target.dataset.value;
                     dropdownList.classList.remove('dropdown__list--visible');
                     //вызываю функцию выбора того, что показывать
-                    selectFormItems(dropdownInput.value);
+                    if (document.querySelector('.manage')){
+                        manageSelect(dropdownInput.value);
+                    } else {
+                        selectFormItems(dropdownInput.value);
+                    }
                 }
             });
 

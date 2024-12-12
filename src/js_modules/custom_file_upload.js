@@ -1,13 +1,15 @@
 export function oneFileUpload(selector = '.material__preview') {
-    const baseContainer = document.querySelector(selector);
-    const input = baseContainer.querySelector(`${selector} input`);
-    const fileName = baseContainer.querySelector('.material__input');
-    input.addEventListener('change', function (event) {
-        if (event.target.files && event.target.files.length) {
-            const fileInfo = event.target.files[0];
-            fileName.innerText = fileInfo.name;
-        }
-    });
+    if (document.querySelector(selector)) {
+        const baseContainer = document.querySelector(selector);
+        const input = baseContainer.querySelector(`${selector} input`);
+        const fileName = baseContainer.querySelector('.material__input');
+        input.addEventListener('change', function (event) {
+            if (event.target.files && event.target.files.length) {
+                const fileInfo = event.target.files[0];
+                fileName.innerText = fileInfo.name;
+            }
+        });
+    }
 }
 
 export function anyFilesUpload() {
