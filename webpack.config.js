@@ -131,6 +131,9 @@ module: {
           },
         ],
       type: 'asset/resource',
+      generator: {
+        filename: 'assets/images/[name].[ext]'
+      }
     },
     {
       test: /\.m?js$/i,
