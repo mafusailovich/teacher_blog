@@ -1,5 +1,9 @@
 .about {
-    background: radial-gradient(50.00% 50.00% at 50% 50%,rgb(221, 251, 231),rgb(255, 255, 255) 100%);
+    background: radial-gradient(
+        50% 50% at 50% 50%,
+        rgb(221, 251, 231),
+        rgb(255, 255, 255) 100%
+    );
     padding-top: clamp(2rem, 3vw + 0.75rem, 5rem);
     padding-bottom: clamp(1rem, 2vw + 0.25rem, 3rem);
     &__title {
@@ -7,6 +11,8 @@
         margin-bottom: clamp(2rem, 2vw + 1rem, 4.5rem);
     }
     &__short-info {
+        margin: 0 auto;
+        max-width: 900px;
         font-weight: 400;
         font-size: clamp(1.8rem, 1.5vw + 0.75rem, 2.4rem);
         line-height: 1.2;

@@ -165,7 +165,9 @@
         line-height: 1.2;
     }
     &__photo-img {
-        width: 240px;
+        max-width: 240px;
+        width: auto;
+        max-height: 240px;
         height: auto;
         border-radius: 100%;
         border: 5px solid rgba(221, 251, 231, 0.47);
@@ -178,7 +180,7 @@
         align-items: flex-start;
         top: 160px;
         &__photo-img {
-            width: 200px;
+            max-height: 200px;
         }
     }
 
@@ -220,7 +222,7 @@
     .short-info {
         top: 210px;
         &__photo-img {
-            width: 150px;
+            max-height: 150px;
         }
     }
 }
@@ -237,9 +239,13 @@
             max-height: 540px;
         }
     }
-    .short-info {
-        &__photo-img {
-            width: 120px;
+    
+}
+
+@media (max-width: 400px){
+    .header {
+        .short-info {
+            top: 150px;
         }
     }
 }
