@@ -220,16 +220,7 @@
     }
 
     .short-info {
-        top: 210px;
-        &__photo-img {
-            max-height: 150px;
-        }
-    }
-}
-
-@media (max-width: 830px) {
-    .short-info {
-        top: 200px;
+        top: 15rem;
     }
 }
 
@@ -245,7 +236,9 @@
 @media (max-width: 400px){
     .header {
         .short-info {
-            top: 150px;
+            &__photo-img {
+                max-height: 15rem;
+            }
         }
     }
 }
