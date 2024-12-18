@@ -19,7 +19,7 @@ import { ClassicEditor, Essentials, Bold, Italic, Font, Paragraph, Image, FileUp
 
 import 'ckeditor5/ckeditor5.css';
 
-//ckeditor
+ckeditor
 if (document.querySelector('.material__text-content')){
   ClassicEditor
     .create( document.querySelector( '.material__text' ), {
@@ -91,7 +91,6 @@ const event_slider = new Swiper('.event-slider', {
     0: {
       slidesPerView: 1,
       spaceBetween: 20,
-      autoHeight: true,
     },
     400:{
       slidesPerView: 1,
