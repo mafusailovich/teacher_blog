@@ -1,7 +1,11 @@
 @use "../variables" as var;
 
 .parents {
-    background: radial-gradient(58.00% 58.00% at 50% 50%,rgba(234, 200, 255, 0.55),rgba(234, 200, 255, 0) 100%);
+    background: radial-gradient(
+        58% 58% at 50% 50%,
+        rgba(234, 200, 255, 0.55),
+        rgba(234, 200, 255, 0) 100%
+    );
     padding-top: clamp(2rem, 3vw + 0.75rem, 5rem);
     padding-bottom: clamp(1rem, 2vw + 0.25rem, 3rem);
     &__title {

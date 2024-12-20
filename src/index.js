@@ -10,6 +10,7 @@ import { Navigation, Zoom } from 'swiper/modules';
 // import Swiper and modules styles
 import 'swiper/css';
 import 'swiper/css/navigation';
+import 'swiper/css/pagination'
 import 'swiper/css/zoom';
 import openMenu from './js_modules/menu_btn.js';
 import openModalPhoto from './js_modules/modal_window.js';
@@ -18,8 +19,9 @@ import { anyFilesUpload, oneFileUpload } from './js_modules/custom_file_upload.j
 import { ClassicEditor, Essentials, Bold, Italic, Font, Paragraph, Image, FileUploader } from 'ckeditor5';
 
 import 'ckeditor5/ckeditor5.css';
+import { LazyResult } from 'postcss';
 
-ckeditor
+
 if (document.querySelector('.material__text-content')){
   ClassicEditor
     .create( document.querySelector( '.material__text' ), {
@@ -69,12 +71,12 @@ const achievements_slider = new Swiper('.achievements-slider', {
 
   // Navigation arrows
   navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
+    nextEl: '.achievements-slider__next',
+    prevEl: '.achievements-slider__prev',
   },
 });
 
-// // Слайдер для галереи событий на странице события
+// Слайдер для галереи событий на странице события
 const event_slider = new Swiper('.event-slider', {
   // configure Swiper to use modules
   modules: [Navigation, Zoom],
@@ -111,6 +113,74 @@ const event_slider = new Swiper('.event-slider', {
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
+  },
+});
+
+// Слайдер для галереи документов для родителей
+const parents_slider = new Swiper('.parents-slider', {
+  // configure Swiper to use modules
+  modules: [Navigation],
+
+  // Optional parameters
+  direction: 'horizontal',
+  loop: true,
+  slidesPerView: 3,
+  spaceBetween: 20,
+
+  
+  breakpoints: {
+    0: {
+      slidesPerView: 1,
+      spaceBetween: 20,
+    },
+    820: {
+      slidesPerView: 2,
+      spaceBetween: 20,
+    },
+    1300: {
+      slidesPerView: 3,
+      spaceBetween: 20,
+    },
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.parents-slider__next',
+    prevEl: '.parents-slider__prev',
+  },
+});
+
+// Слайдер для галереи документов для педагогов
+const teachers_slider = new Swiper('.teachers-slider', {
+  // configure Swiper to use modules
+  modules: [Navigation],
+
+  // Optional parameters
+  direction: 'horizontal',
+  loop: true,
+  slidesPerView: 3,
+  spaceBetween: 20,
+
+  
+  breakpoints: {
+    0: {
+      slidesPerView: 1,
+      spaceBetween: 20,
+    },
+    820: {
+      slidesPerView: 2,
+      spaceBetween: 20,
+    },
+    1300: {
+      slidesPerView: 3,
+      spaceBetween: 20,
+    },
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.parents-slider__next',
+    prevEl: '.parents-slider__prev',
   },
 });
 

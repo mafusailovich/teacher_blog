@@ -3,4 +3,4 @@ dist/
 .vscode/
 package-lock.json
 src/documents/
-index_for_wordpress.js
+index__.js

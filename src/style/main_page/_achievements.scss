@@ -19,27 +19,32 @@
     .swiper-button-next,
     .swiper-button-prev {
         position: absolute;
-        top: -70px;
-        right: 0;
+        top: -7rem;
+        right: 2rem;
         width: clamp(4rem, 5vw + 1rem, 7rem);
         height: clamp(4rem, 5vw + 1rem, 7rem);
-        background-color: rgba(255, 234, 143, 0.2);
+        // background-color: rgba(255, 234, 143, 0.2);
+        background: radial-gradient(
+        50% 50% at 50% 50%,
+        rgb(221, 251, 231),
+        rgba(255, 255, 255, 0) 100%
+    );
         border-radius: 100%;
         &::after {
             font-size: clamp(2.5rem, 2vw + 1.25rem, 4rem);
         }
         @media (max-width: 1440px) {
-            top: -60px;
+            top: -6rem;
         }
         @media (max-width: 920px) {
-            top: -40px;
+            top: -4rem;
         }
     }
     .swiper-button-prev {
         left: initial;
-        right: 75px;
+        right: 9.5rem;
         @media (max-width: 768px){
-            right: 50px;
+            right: 7.5rem;
         }
     }
 }
